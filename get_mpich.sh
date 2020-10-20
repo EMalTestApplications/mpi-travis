@@ -1,5 +1,3 @@
-#!/bin/sh
-
 if [ -f mpich/lib/libmpich.so ]; then
   echo "libmpich.so found -- nothing to build."
 else
@@ -24,4 +22,3 @@ else
   cd -
   rm -rf mpich-3.2
 fi
-

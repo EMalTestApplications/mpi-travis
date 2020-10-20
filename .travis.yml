@@ -4,7 +4,8 @@ cache:
   directories:
   - mpich
 before_install:
-  - sh ./get_mpich.sh
+  -  sh ./get_mpich.sh #./install-mpi.sh mpich
 script:
+  - ls
   - make test
   - ./mpich/bin/mpirun -np 4 ./test
