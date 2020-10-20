@@ -4,11 +4,11 @@ if [ -f mpich/lib/libmpich.so ]; then
   echo "libmpich.so found -- nothing to build."
 else
   echo "Downloading mpich source."
-  wget http://www.mpich.org/static/downloads/3.2/mpich-3.2.tar.gz
-  tar xfz mpich-3.2.tar.gz
-  rm mpich-3.2.tar.gz
+  wget http://www.mpich.org/static/downloads/3.4a3/mpich-3.4a3.tar.gz
+  tar xfz mpich-3.4a3.tar.gz
+  rm mpich-3.4a3.tar.gz
   echo "configuring and building mpich."
-  cd mpich-3.2
+  cd mpich-3.4a3
   ./configure \
           --prefix=`pwd`/../mpich \
           --enable-static=false \
@@ -22,6 +22,6 @@ else
   make -j4
   make install
   cd -
-  rm -rf mpich-3.2
+  rm -rf mpich-3.4a3
 fi
 
