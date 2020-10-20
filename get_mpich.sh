@@ -8,6 +8,7 @@ else
   tar xfz mpich-3.4a3.tar.gz
   rm mpich-3.4a3.tar.gz
   echo "configuring and building mpich."
+  Mkdir mpich
   cd mpich-3.4a3
   ./configure \
           --prefix=`pwd`/../mpich \
