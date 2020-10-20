@@ -8,19 +8,12 @@ else
   tar xfz mpich-3.4a3.tar.gz
   rm mpich-3.4a3.tar.gz
   echo "configuring and building mpich."
-  Mkdir mpich
+  mkdir mpich
   cd mpich-3.4a3
   ./configure \
           --prefix=`pwd`/../mpich \
-          --enable-static=false \
-          --enable-alloca=true \
-          --disable-long-double \
-          --enable-threads=single \
-          --enable-fortran=no \
-          --enable-fast=all \
-          --enable-g=none \
-          --enable-timing=none
-  make -j4
+          --enable-static=false 
+  make -j2
   make install
   cd -
   rm -rf mpich-3.4a3
